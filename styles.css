@@ -1,0 +1,87 @@
+@import url("https://fonts.googleapis.com/css2?family=Sora&display=swap");
+
+/* reset */
+
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+    list-style: none;
+    text-decoration: none;
+    color: white;
+    font-family: "Sora", sans-serif;
+}
+
+/* Header */
+
+header {
+    width: 100%;
+    height: 176px;
+    background-image: url(assets/img/header.jpg);
+    background-size: cover;
+    position: relative;
+}
+
+/* NAV */
+
+header ul {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+header h1 {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    color: #e1a150;
+    font-size: 64px;
+    text-shadow: -2px -2px 0 black, 2px -2px 0 black, -2px 2px 0 black,
+        2px 2px 0 black;
+}
+
+/* BODY */
+
+body {
+    background-color: #1e1e1e;
+}
+
+/* MAIN */
+
+main div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 24px;
+}
+
+main h2 {
+    border-bottom: #e1a150 solid 1px;
+    font-size: 30px;
+}
+
+
+.logo {
+    width: 95px;
+    height: 95px;
+}
+
+
+.item {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.item img {
+    width: 131px;
+    height: 131px;
+}
+
+.item2 {
+    text-align: center;
+}
+
