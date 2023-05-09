@@ -10,7 +10,7 @@
     text-decoration: none;
     color: white;
     font-family: "Sora", sans-serif;
-    /* overflow: hidden; */
+    overflow: hidden;
 }
 
 /* Header */
@@ -72,6 +72,7 @@ main h2 {
 .item {
     display: flex;
     flex-direction: row;
+    font-size: 15px;
     gap: 10px;
 }
 
@@ -125,6 +126,7 @@ footer li {
 
 .footer {
     z-index: 1;
+    width: 100%;
 }
 
 .logo2 {
