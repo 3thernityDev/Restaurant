@@ -157,6 +157,8 @@ button {
     margin-top: 10px;
 }
 
+/* footer */
+
 .orange-square {
     position: absolute;
     width: 100%;
@@ -209,6 +211,8 @@ footer li {
 .footer span {
     font-size: 30px;
 }
+
+/* RESPONSIVES */
 
 @media screen (min-widht: 600px) {
 }
