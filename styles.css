@@ -10,7 +10,7 @@
     text-decoration: none;
     color: white;
     font-family: "Sora", sans-serif;
-    overflow: hidden;
+    box-sizing: border-box;
 }
 
 /* Header */
@@ -21,12 +21,6 @@ header {
     background-image: url(assets/img/header.jpg);
     background-size: cover;
     position: relative;
-}
-
-header ul {
-    display: flex;
-    justify-content: space-between;
-    padding: 10px;
 }
 
 header h1 {
@@ -42,69 +36,35 @@ header h1 {
 }
 /* NAV */
 
-.navigation {
+nav {
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 10px;
+    padding: 1rem 2rem;
+}
+
+.toggle {
+    display: none;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 50%;
+}
+
+.cart {
     font-size: 30px;
 }
 
-/* Sidenav menu */
-.sidenav {
-    height: 100%;
-    width: 250px;
-    position: fixed;
-    z-index: 3;
-    top: 0;
-    left: -250px;
-    background-color: #1e1e1e;
-    padding-top: 60px;
-    transition: left 0.5s ease;
+.btn {
+    background: transparent;
+    border: 2px solid #e1a150;
+    box-shadow: none;
 }
 
-.sidenav ul {
-    display: flex;
-    flex-direction: column;
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-}
-
-/* Sidenav menu links */
-.sidenav a {
-    padding: 8px 8px 8px 32px;
-    text-decoration: none;
-    font-size: 25px;
-    color: #ffffff;
-    display: block;
-    transition: 0.3s;
-}
-
-.sidenav a:hover {
-    color: #e1a150;
-}
-
-/* Active class */
-.sidenav.active {
-    left: 0;
-}
-
-/* Close btn */
-.sidenav .close {
-    position: absolute;
-    top: 0;
-    right: 25px;
-    font-size: 36px;
-}
-
-.burger-icon span {
-    display: block;
-    width: 35px;
-    height: 5px;
-    background-color: rgb(255, 255, 255);
-    margin: 6px 0;
-}
 /* BODY */
 
 body {
@@ -112,6 +72,13 @@ body {
 }
 
 /* MAIN */
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+}
 
 main div {
     display: flex;
@@ -164,7 +131,6 @@ button {
     width: 100%;
     height: 76px;
     margin-top: 15px;
-
     background: linear-gradient(180deg, #f77f00 0%, #e6aa51 100%);
     border-radius: 20px 20px 0px 0px;
 }
@@ -210,4 +176,92 @@ footer li {
 
 .footer span {
     font-size: 30px;
+}
+
+@media screen and (min-width: 768px) {
+    main div {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        padding: 24px;
+        gap: 50px;
+    }
+
+    main h2 {
+        border-bottom: #e1a150 solid 1px;
+        font-size: 50px;
+    }
+
+    .logo {
+        width: 100px;
+        height: 100px;
+    }
+
+    .item img {
+        width: 130px;
+        height: 130px;
+    }
+}
+
+/* NAV (possible modification a suivre) */
+@media all and (max-width: 991px) {
+    .toggle {
+        display: block;
+        font-size: 2rem;
+        cursor: pointer;
+        position: relative;
+        z-index: 20;
+    }
+
+    .cart {
+        position: relative;
+        z-index: 20;
+    }
+
+    .open {
+        display: block;
+    }
+
+    .close {
+        display: none;
+    }
+
+    .open .open {
+        display: none;
+    }
+
+    .open .close {
+        display: block;
+    }
+
+    .menu {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: #1e1e1e;
+        z-index: 3;
+        flex-direction: column;
+        padding: 2rem;
+        justify-content: space-around;
+        transform: translateX(-100%);
+        transition: transform 1s;
+    }
+
+    .menu li a {
+        font-size: 2rem;
+    }
+
+    .btnmenu {
+        font-size: 2rem;
+    }
+
+    .open .menu {
+        transform: translateX(0);
+    }
+}
+
+@media screen and (min-width: 1024px) {
 }
