@@ -1,2 +1,2 @@
 # Restaurant
-Page en cour de développement 
+Page en cour de développement (Projet en stand by)
